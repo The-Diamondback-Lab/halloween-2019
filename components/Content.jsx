@@ -7,12 +7,6 @@ export default class Content extends React.Component {
   }
 
   render() {
-    if (this.state.err) {
-      return <div>Oopsie Doopsie</div>;
-    } else if (!this.state.paragraphs) {
-      return <div></div>;
-    }
-
     return (
       <div id='article-content'>
         {this.state.paragraphs.map((para, idx) => (

@@ -11,11 +11,6 @@ export default class Header extends React.Component {
   }
 
   render() {
-    if (!this.state.data) {
-      // TODO Load proper loading screen (spinner, etc...)
-      return <div></div>;
-    }
-
     return (
       <div className='header-bg'>
         <div className='header-content'>
