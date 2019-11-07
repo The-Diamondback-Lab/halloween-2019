@@ -1,0 +1,47 @@
+html, body, #__next, #home {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 1vw;
+}
+
+@font-face {
+  font-family: solano-gothic-bd;
+  src: url("/fonts/SolanoGothicMVB-BdCap.otf");
+}
+
+.header-bg {
+  width: 100%;
+  height: 100%;
+
+  background-size: cover;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('/bg.jpg');
+  background-attachment: fixed;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  height: 50%;
+}
+
+#header-logo {
+  width: 50%;
+  margin: 1em 0;
+}
+
+#title-text, #blurb {
+  font-size: 3em;
+  color: white;
+  font-family: 'solano-gothic-bd';
+}
