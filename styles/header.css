@@ -3,7 +3,8 @@
   height: 100%;
 
   background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/hallo.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('/images/hallo.jpg');
   background-attachment: fixed;
 
   text-align: center;

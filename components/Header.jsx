@@ -20,7 +20,7 @@ export default class Header extends React.Component {
       <div className='header-bg'>
         <div className='header-content'>
           <a href='https://dbknews.com' target='_blank'>
-            <img id='header-logo' src='/dbk-logo.png'></img>
+            <img id='header-logo' src='/images/dbk-logo.png'></img>
           </a>
           <div id='title-text'>{this.state.data.title}</div>
           <div id='blurb'>{this.state.data.blurb}</div>
