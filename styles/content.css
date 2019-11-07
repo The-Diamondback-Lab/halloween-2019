@@ -1,0 +1,10 @@
+#article-content {
+  font-size: 1.75em;
+  width: 70%;
+  margin: 0 auto;
+}
+
+p.article-paragraph {
+  font-family: 'roboto-reg';
+  margin: 1.5em 0;
+}
