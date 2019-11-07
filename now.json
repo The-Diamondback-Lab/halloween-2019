@@ -4,15 +4,6 @@
   "public": true,
   "alias": "halloween19.dbknews.com",
   "scope": "the-diamondback-lab",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@now/static-build",
-      "config": {
-        "distDir": "./"
-      }
-    }
-  ],
   "regions": [
     "iad1"
   ],
