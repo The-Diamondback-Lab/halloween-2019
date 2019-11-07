@@ -1,17 +1,9 @@
 import React from 'react';
-import axios from 'axios';
-import Error from '../components/Error';
-
+import data from '../public/content.json';
 export default class Content extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { paragraphs: null };
-
-    axios.get(this.props.contentPath)
-      .then(resp => this.setState({
-        paragraphs: resp.data
-      }))
-      .catch(err => this.setState({ err }));
+    this.state = { paragraphs: data };
   }
 
   render() {
@@ -22,8 +14,10 @@ export default class Content extends React.Component {
     }
 
     return (
-      <div id="article-content">
-        {this.state.paragraphs.map(para => (<p class="article-paragraph">{para}</p>))}
+      <div id='article-content'>
+        {this.state.paragraphs.map((para) => (
+          <p className='article-paragraph'>{para}</p>
+        ))}
       </div>
     );
   }

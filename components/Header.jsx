@@ -1,18 +1,13 @@
 import React from 'react';
-import axios from 'axios';
 import '../styles/main.css';
+import data from '../public/data-header.json';
 
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
     console.log(this.props);
 
-    this.state = { data: null };
-
-    axios(this.props.dataPath)
-      .then(resp => this.setState({
-        data: resp.data
-      }));
+    this.state = { data };
   }
 
   render() {
@@ -27,12 +22,8 @@ export default class Header extends React.Component {
           <a href='https://dbknews.com' target='_blank'>
             <img id='header-logo' src='/dbk-logo.png'></img>
           </a>
-          <div id="title-text">
-            {this.state.data.title}
-          </div>
-          <div id="blurb">
-            {this.state.data.blurb}
-          </div>
+          <div id='title-text'>{this.state.data.title}</div>
+          <div id='blurb'>{this.state.data.blurb}</div>
         </div>
       </div>
     );

@@ -10,8 +10,8 @@ const Home = () => (
       <link rel='icon' href='/favicon.ico' />
     </Head>
 
-    <Header dataPath='/data-header.json' />
-    <Content contentPath='/content.json' />
+    <Header />
+    <Content />
   </div>
 );
 
