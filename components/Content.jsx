@@ -15,8 +15,10 @@ export default class Content extends React.Component {
 
     return (
       <div id='article-content'>
-        {this.state.paragraphs.map((para) => (
-          <p className='article-paragraph'>{para}</p>
+        {this.state.paragraphs.map((para, idx) => (
+          <p key={`content-paragraph-${idx}`} className='article-paragraph'>
+            {para}
+          </p>
         ))}
       </div>
     );
