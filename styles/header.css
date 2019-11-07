@@ -31,12 +31,12 @@
 
 #title-text {
   font-size: 3.5em;
-  font-family: 'solano-gothic-bd';
+  font-family: 'Solano-Gothic-Bold';
 }
 
 #blurb {
   font-size: 2em;
-  font-family: 'solano-gothic-lc';
+  font-family: 'Solano-Gothic-Light-SC';
   background: rgba(100, 100, 100, 0.6);
   padding: 0.25em 0.5em;
 }
