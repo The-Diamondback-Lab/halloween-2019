@@ -1,0 +1,9 @@
+@font-face {
+  font-family: solano-gothic-bd;
+  src: url('/fonts/SolanoGothicMVB-BdCap.otf');
+}
+
+@font-face {
+  font-family: solano-gothic-lc;
+  src: url('/fonts/SolanoGothicMVB-Sb.otf');
+}
