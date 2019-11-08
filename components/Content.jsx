@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
+import Podcast from './Podcast';
 import sanitizeHtml from 'sanitize-html';
 /**
  * @type {string[]}
@@ -39,7 +40,6 @@ export default class Content extends React.Component {
     this.splitImages = this.splitImages.bind(this);
     this.generateGalleries = this.generateGalleries.bind(this);
     this.generateContent = this.generateContent.bind(this);
-    this.generatePodcast = this.generatePodcast.bind(this);
 
     this.state = {
       /**
@@ -129,7 +129,11 @@ export default class Content extends React.Component {
     let { paragraphs } = this.state;
 
     return paragraphs.reduce((elems, para, idx) => {
-      if (para.match(/^GALLERY\:\:/)) {
+      if (para.match(/^PODCAST\:\:/)) {
+        let podcastSrc = para.split('PODCAST::')[1];
+        elems.push(<Podcast src={podcastSrc} />);
+        return elems;
+      } else if (para.match(/^GALLERY\:\:/)) {
         // Find the gallery index map for this index (if any)
         let galleryIndicesMap = galleryData.indices.find((arr) => arr[0] === idx);
 
@@ -157,43 +161,11 @@ export default class Content extends React.Component {
     }, []);
   }
 
-  /**
-   * @returns {JSX.Element}
-   */
-  generatePodcast() {
-    let { paragraphs } = this.state;
-
-    // Find index of podcast directive
-    let podcastLine = paragraphs.find((para) => para.match(/^PODCAST\:\:/));
-
-    if (!podcastLine) {
-      return null;
-    } else {
-      let podcastSrc = podcastLine.split('PODCAST::')[1];
-      return (
-        <iframe
-          width='100%'
-          height='166px'
-          src={podcastSrc}
-          scrolling='no'
-          frameborder='no'
-          allow='autoplay'
-        ></iframe>
-      );
-    }
-  }
-
   render() {
     let { paragraphs } = this.state;
 
     let galleryObjs = this.generateGalleries();
     let articleContent = this.generateContent(galleryObjs.data, galleryObjs.galleries);
-
-    let podcast = this.generatePodcast();
-
-    if (podcast) {
-      articleContent.splice(0, 0, podcast);
-    }
 
     return <div id='article-content'>{articleContent}</div>;
   }
