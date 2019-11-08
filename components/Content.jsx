@@ -1,19 +1,15 @@
-/**
- * @typedef ImageGalleryItem
- * @property {string} original path to original, full-size photo
- * @property {string} thumbnail path to thumbnail of photo
- */
-
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
+import sanitizeHtml from 'sanitize-html';
 /**
  * @type {string[]}
  */
 import contentData from '../public/content.json';
 /**
- * @type {ImageGalleryItem[]}
+ * @type {string[]}
  */
 import imageData from '../public/images.json';
+
 
 export default class Content extends React.Component {
   constructor(props) {
@@ -45,13 +41,15 @@ export default class Content extends React.Component {
       </div>
     );
 
-    let articleContent = this.state.paragraphs.map((para, idx) => (
-      <p key={`content-paragraph-${idx}`} className='article-paragraph'>
-        {para}
-      </p>
-    ));
+    let articleContent = this.state.paragraphs.map((para, idx) => {
+      if (para.match(/^PERSON\:\:/)) {
+        para = `<i>${para.split('::')[1]}</i>`;
+      }
 
-    let insertIndex = Math.max(articleContent.length / 2, 0);
+      return (<p key={`content-paragraph-${idx}`} className='article-paragraph' dangerouslySetInnerHTML={{__html: sanitizeHtml(para)}}></p>);
+    });
+
+    let insertIndex = Math.max(articleContent.length / 2 - 1, 0);
     articleContent.splice(insertIndex, 0, imageGallery);
 
     return (
