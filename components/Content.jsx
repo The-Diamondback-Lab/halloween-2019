@@ -34,7 +34,7 @@ export default class Content extends React.Component {
 
   render() {
     let imageGallery = (
-      <div class="gallery-wrapper">
+      <div className="gallery-wrapper">
         <ImageGallery
           items={this.state.images}
           lazyLoad={true}
