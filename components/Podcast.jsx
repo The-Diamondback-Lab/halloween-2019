@@ -12,7 +12,7 @@ export default class Podcast extends React.Component {
         height='166px'
         src={this.props.src}
         scrolling='no'
-        frameborder='no'
+        frameBorder='no'
         allow='autoplay'
       ></iframe>
     );
