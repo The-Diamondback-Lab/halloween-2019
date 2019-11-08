@@ -25,30 +25,12 @@
   color: white;
 }
 
-#header-logo {
-  margin: 1em 0;
-}
-
-@media screen and (max-width: 980px) {
-  #header-logo {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 980px) {
-  #header-logo {
-    width: 590px;
-  }
-}
-
 #title-text {
   font-size: 3.5em;
   font-family: 'Solano-Gothic-Bold';
 }
 
-#blurb {
-  font-size: 2em;
-  font-family: 'Solano-Gothic-Light-SC';
-  background: rgba(100, 100, 100, 0.6);
-  padding: 0.25em 0.5em;
+#subtitle-text {
+  font-size: 2.5em;
+  font-family: 'Solano-Gothic-Bold';
 }
