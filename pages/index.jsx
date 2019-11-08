@@ -1,9 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
+import Spinner from '../components/Spinner';
 import Header from '../components/Header';
 import Content from '../components/Content';
+import Footer from '../components/Footer';
 import'../styles/main.css';
-import Spinner from '../components/Spinner';
 
 export default class Home extends React.Component {
   constructor() {
@@ -49,6 +50,7 @@ export default class Home extends React.Component {
 
         <Header />
         <Content />
+        <Footer />
       </div>
     );
   }
