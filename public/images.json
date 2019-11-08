@@ -1,11 +1,12 @@
 [
-  {
-    "original": "images/gallery/a.jpg"
-  },
-  {
-    "original": "images/gallery/b.jpg"
-  },
-  {
-    "original": "images/gallery/c.jpg"
-  }
+  "images/gallery/resized_0.jpeg",
+  "images/gallery/resized_1.jpeg",
+  "images/gallery/resized_2.jpeg",
+  "images/gallery/resized_3.jpeg",
+  "images/gallery/resized_4.jpeg",
+  "images/gallery/resized_5.jpeg",
+  "images/gallery/resized_6.jpeg",
+  "images/gallery/resized_7.jpeg",
+  "images/gallery/resized_8.jpeg",
+  "images/gallery/resized_9.jpeg"
 ]

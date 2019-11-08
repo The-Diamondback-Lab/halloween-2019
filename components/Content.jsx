@@ -19,25 +19,24 @@ export default class Content extends React.Component {
   constructor(props) {
     super(props);
 
-    imageData.forEach((imgFileObj, i) => {
-      if (!imgFileObj.original) {
-        throw new Error(`Image ${i} does not have an original path`);
+    let images = imageData.map(filePath => {
+      return {
+        original: filePath,
+        thumbnail: filePath
       }
-
-      imgFileObj.originalClass = imgFileObj.originalClass || 'gallery-img';
-
-      imgFileObj.thumbnail = imgFileObj.thumbnail || imgFileObj.original;
-      imgFileObj.thumbnailClass = imgFileObj.thumbnailClass || 'gallery-thumb';
     });
 
-    this.state = { paragraphs: contentData };
+    this.state = {
+      paragraphs: contentData,
+      images
+    };
   }
 
   render() {
     return (
       <div id='article-content'>
         <ImageGallery
-          items={imageData}
+          items={this.state.images}
           lazyLoad={true}
           showPlayButton={false}
           showFullscreenButton={false}
