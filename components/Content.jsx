@@ -143,7 +143,9 @@ export default class Content extends React.Component {
           return elems;
         }
       } else if (para.match(/^PERSON\:\:/)) {
-        para = `<i>${para.split('::')[1]}</i>`;
+        para = `<i>${para.split('PERSON::')[1]}</i>`;
+      } else if (para.match(/^BOLD\:\:/)) {
+        para = `<b>${para.split('BOLD::')[1]}</i>`;
       } else if (para.match(/^[A-Z]+\:\:/)) {
         // Unhandled directive, skip over
         return elems;
