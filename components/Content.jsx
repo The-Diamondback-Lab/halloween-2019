@@ -40,6 +40,7 @@ export default class Content extends React.Component {
           lazyLoad={true}
           showPlayButton={false}
           showFullscreenButton={false}
+          showIndex={true}
         />
         {this.state.paragraphs.map((para, idx) => (
           <p key={`content-paragraph-${idx}`} className='article-paragraph'>

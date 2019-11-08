@@ -26,6 +26,10 @@ p.article-paragraph {
   margin: 1.5em 0;
 }
 
+.image-gallery-index {
+  font-family: 'Solano-Gothic-Light-SC';
+}
+
 .image-gallery-slide img {
   width: 100%;
   max-height: 400px;
