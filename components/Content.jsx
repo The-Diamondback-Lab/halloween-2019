@@ -33,20 +33,26 @@ export default class Content extends React.Component {
   }
 
   render() {
+    let imageGallery = (<ImageGallery
+      items={this.state.images}
+      lazyLoad={true}
+      showPlayButton={false}
+      showFullscreenButton={false}
+      showIndex={true}
+    />);
+
+    let articleContent = this.state.paragraphs.map((para, idx) => (
+      <p key={`content-paragraph-${idx}`} className='article-paragraph'>
+        {para}
+      </p>
+    ));
+
+    let insertIndex = Math.max(articleContent.length / 2, 0);
+    articleContent.splice(insertIndex, 0, imageGallery);
+
     return (
       <div id='article-content'>
-        <ImageGallery
-          items={this.state.images}
-          lazyLoad={true}
-          showPlayButton={false}
-          showFullscreenButton={false}
-          showIndex={true}
-        />
-        {this.state.paragraphs.map((para, idx) => (
-          <p key={`content-paragraph-${idx}`} className='article-paragraph'>
-            {para}
-          </p>
-        ))}
+        {articleContent}
       </div>
     );
   }
