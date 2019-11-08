@@ -26,8 +26,19 @@
 }
 
 #header-logo {
-  width: 50%;
   margin: 1em 0;
+}
+
+@media screen and (max-width: 980px) {
+  #header-logo {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  #header-logo {
+    width: 590px;
+  }
 }
 
 #title-text {
