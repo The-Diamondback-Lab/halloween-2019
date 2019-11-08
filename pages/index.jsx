@@ -44,7 +44,7 @@ export default class Home extends React.Component {
           loaded={this.state.loaded}
           startFadeOut={this.state.startFadeOut} />
         <Head>
-          <title>DBK Halloween 2019</title>
+          <title>Little Bus of Horrors</title>
           <link rel='icon' href='/favicon.ico' />
         </Head>
 
