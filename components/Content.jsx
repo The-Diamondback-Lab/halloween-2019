@@ -33,13 +33,17 @@ export default class Content extends React.Component {
   }
 
   render() {
-    let imageGallery = (<ImageGallery
-      items={this.state.images}
-      lazyLoad={true}
-      showPlayButton={false}
-      showFullscreenButton={false}
-      showIndex={true}
-    />);
+    let imageGallery = (
+      <div class="gallery-wrapper">
+        <ImageGallery
+          items={this.state.images}
+          lazyLoad={true}
+          showPlayButton={false}
+          showFullscreenButton={false}
+          showIndex={true}
+        />
+      </div>
+    );
 
     let articleContent = this.state.paragraphs.map((para, idx) => (
       <p key={`content-paragraph-${idx}`} className='article-paragraph'>
