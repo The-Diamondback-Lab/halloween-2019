@@ -131,7 +131,7 @@ export default class Content extends React.Component {
     return paragraphs.reduce((elems, para, idx) => {
       if (para.match(/^PODCAST\:\:/)) {
         let podcastSrc = para.split('PODCAST::')[1];
-        elems.push(<Podcast src={podcastSrc} />);
+        elems.push(<Podcast key={`podcast-${idx}`} src={podcastSrc} />);
         return elems;
       } else if (para.match(/^GALLERY\:\:/)) {
         // Find the gallery index map for this index (if any)
