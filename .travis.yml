@@ -12,7 +12,8 @@ deploy:
     access_key_id: "${AWS_ACCESS_KEY_ID}"
     secret_access_key: ${AWS_SECRET_ACCESS_KEY}
     bucket: "halloween19.dbknews.com"
-    local_dir: build # TODO Next.JS compiles to .next/
+    acl: public_read
+    local_dir: build
     skip_cleanup: true
     on:
       branch: master
@@ -20,7 +21,8 @@ deploy:
     access_key_id: "${AWS_ACCESS_KEY_ID}"
     secret_access_key: ${AWS_SECRET_ACCESS_KEY}
     bucket: "staging.halloween19.dbknews.com"
-    local_dir: build # TODO Next.JS compiles to .next/
+    acl: public_read
+    local_dir: build
     skip_cleanup: true
     on:
       branch: staging
