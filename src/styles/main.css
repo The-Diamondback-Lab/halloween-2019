@@ -1,7 +1,7 @@
 @import 'animated.css';
 @import 'spinner.css';
 @import 'fonts.css';
-@import '../node_modules/react-image-gallery/styles/css/image-gallery.css';
+@import '../../node_modules/react-image-gallery/styles/css/image-gallery.css';
 @import 'header.css';
 @import 'content.css';
 @import 'footer.css';

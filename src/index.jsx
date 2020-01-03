@@ -1,12 +1,14 @@
 import React from 'react';
-import Head from 'next/head';
-import Spinner from '../components/Spinner';
-import Header from '../components/Header';
-import Content from '../components/Content';
-import Footer from '../components/Footer';
-import'../styles/main.css';
+import ReactDOM from 'react-dom';
+import Helmet from 'react-helmet';
+import Spinner from './components/Spinner';
+import Header from './components/Header';
+import Content from './components/Content';
+import Footer from './components/Footer';
 
-export default class Home extends React.Component {
+import './styles/main.css';
+
+class Home extends React.Component {
   constructor() {
     super();
     this.state = { loaded: false, startFadeOut: false };
@@ -43,10 +45,10 @@ export default class Home extends React.Component {
         <Spinner
           loaded={this.state.loaded}
           startFadeOut={this.state.startFadeOut} />
-        <Head>
+        <Helmet>
           <title>Little Bus of Horrors</title>
-          <link rel='icon' href='/favicon.ico' />
-        </Head>
+          <link rel='icon' href='favicon.ico' />
+        </Helmet>
 
         <Header />
         <Content />
@@ -55,3 +57,5 @@ export default class Home extends React.Component {
     );
   }
 }
+
+ReactDOM.render(<Home />, document.getElementById('app'));

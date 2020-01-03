@@ -1,11 +1,6 @@
 import React from 'react';
-import '../styles/main.css';
 
 export default class Header extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className='header-bg'>

@@ -1,11 +1,8 @@
 import React from 'react';
-import '../styles/main.css';
+
+import spinnerPath from '../assets/spinner.jpg';
 
 export default class Spinner extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     let dontShow = this.props.loaded && !this.props.startFadeOut;
     let wrapperClasses = ['spinner-wrapper'];
@@ -21,7 +18,8 @@ export default class Spinner extends React.Component {
           <div className="spinner-container">
             <center>
               <img className="spinner-image"
-                src="/images/spinner.jpg"
+                src={spinnerPath}
+                alt="A spinner animation"
               />
               <div className="preload"> <span></span> <span></span> <span></span></div>
             </center>
