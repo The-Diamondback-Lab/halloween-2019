@@ -1,5 +1,7 @@
 {
   "name": "halloween19",
+  "description": "A special project for Halloween 2019 at UMD",
+  "license": "BSD-3-Clause",
   "version": "0.1.0",
   "scripts": {
     "build": "react-scripts build",
