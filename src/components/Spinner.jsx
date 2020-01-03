@@ -3,10 +3,6 @@ import React from 'react';
 import spinnerPath from '../assets/spinner.jpg';
 
 export default class Spinner extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     let dontShow = this.props.loaded && !this.props.startFadeOut;
     let wrapperClasses = ['spinner-wrapper'];

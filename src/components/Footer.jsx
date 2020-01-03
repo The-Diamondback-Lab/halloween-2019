@@ -4,10 +4,6 @@ import credits from '../data/credits.json';
 import logoPath from '../assets/dbk-logo.png';
 
 export default class Footer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <footer>
