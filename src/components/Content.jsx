@@ -130,11 +130,11 @@ export default class Content extends React.Component {
     let { paragraphs } = this.state;
 
     return paragraphs.reduce((elems, para, idx) => {
-      if (para.match(/^PODCAST\:\:/)) {
+      if (para.match(/^PODCAST::/)) {
         let podcastSrc = para.split('PODCAST::')[1];
         elems.push(<Podcast key={`podcast-${idx}`} src={podcastSrc} />);
         return elems;
-      } else if (para.match(/^GALLERY\:\:/)) {
+      } else if (para.match(/^GALLERY::/)) {
         // Find the gallery index map for this index (if any)
         let galleryIndicesMap = galleryData.indices.find((arr) => arr[0] === idx);
 
@@ -143,11 +143,11 @@ export default class Content extends React.Component {
           elems.push(galleries[galleryIndicesMap[1]]);
           return elems;
         }
-      } else if (para.match(/^PERSON\:\:/)) {
+      } else if (para.match(/^PERSON::/)) {
         para = `<i>${para.split('PERSON::')[1]}</i>`;
-      } else if (para.match(/^BOLD\:\:/)) {
+      } else if (para.match(/^BOLD::/)) {
         para = `<b>${para.split('BOLD::')[1]}</i>`;
-      } else if (para.match(/^[A-Z]+\:\:/)) {
+      } else if (para.match(/^[A-Z]+::/)) {
         // Unhandled directive, skip over
         return elems;
       }
