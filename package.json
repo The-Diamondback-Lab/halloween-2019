@@ -5,7 +5,7 @@
   "scripts": {
     "predev": "npm run build",
     "dev": "cross-env NODE_OPTIONS=\"--inspect\" next dev",
-    "prebuild": "rimraf .next/ out/",
+    "prebuild": "rimraf out/",
     "build": "next build && next export",
     "start": "next start"
   },
