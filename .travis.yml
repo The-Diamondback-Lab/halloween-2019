@@ -4,14 +4,25 @@ node_js:
 branches:
   only:
     - master
+    - staging
 before_deploy:
   - npm run build
 deploy:
-  provider: s3
-  access_key_id: "${AWS_ACCESS_KEY_ID}"
-  secret_access_key: ${AWS_SECRET_ACCESS_KEY}
-  bucket: "halloween19.dbknews.com"
-  local_dir: build # TODO Next.JS compiles to .next/
-  skip_cleanup: true
+  - provider: s3
+    access_key_id: "${AWS_ACCESS_KEY_ID}"
+    secret_access_key: ${AWS_SECRET_ACCESS_KEY}
+    bucket: "halloween19.dbknews.com"
+    local_dir: build # TODO Next.JS compiles to .next/
+    skip_cleanup: true
+    on:
+      branch: master
+  - provider: s3
+    access_key_id: "${AWS_ACCESS_KEY_ID}"
+    secret_access_key: ${AWS_SECRET_ACCESS_KEY}
+    bucket: "staging.halloween19.dbknews.com"
+    local_dir: build # TODO Next.JS compiles to .next/
+    skip_cleanup: true
+    on:
+      branch: staging
 after_deploy:
   - echo "Static site deployed"
