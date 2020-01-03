@@ -45,7 +45,7 @@ export default class Home extends React.Component {
           startFadeOut={this.state.startFadeOut} />
         <Head>
           <title>Little Bus of Horrors</title>
-          <link rel='icon' href='/favicon.ico' />
+          <link rel='icon' href='favicon.ico' />
         </Head>
 
         <Header />

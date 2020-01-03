@@ -21,7 +21,7 @@ export default class Spinner extends React.Component {
           <div className="spinner-container">
             <center>
               <img className="spinner-image"
-                src="/images/spinner.jpg"
+                src="images/spinner.jpg"
               />
               <div className="preload"> <span></span> <span></span> <span></span></div>
             </center>
