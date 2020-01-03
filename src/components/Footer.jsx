@@ -10,7 +10,7 @@ export default class Footer extends React.Component {
         <p className="credits">Credits</p>
         { credits.map((creditLine, idx) => <p key={`credit-${idx}`}>{creditLine}</p>) }
         <a href="https://dbknews.com" target="_blank" rel="noopener noreferrer">
-          <img className="footer-logo" src={logoPath}></img>
+          <img className="footer-logo" src={logoPath} alt="The Diamondback Logo"></img>
         </a>
       </footer>
     );

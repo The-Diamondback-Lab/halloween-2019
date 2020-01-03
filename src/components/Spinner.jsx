@@ -19,6 +19,7 @@ export default class Spinner extends React.Component {
             <center>
               <img className="spinner-image"
                 src={spinnerPath}
+                alt="A spinner animation"
               />
               <div className="preload"> <span></span> <span></span> <span></span></div>
             </center>
