@@ -1,26 +1,29 @@
 {
-  "name": "my-app",
+  "name": "halloween19",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS=\"--inspect\" next dev",
-    "build": "next build",
-    "predeploy": "rimraf out/ && npm run build",
-    "deploy": "next export",
-    "start": "next start"
+    "build": "react-scripts build",
+    "start": "react-scripts start"
   },
+  "homepage": "./",
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "axios": "^0.19.0",
-    "next": "9.1.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-helmet": "^5.2.1",
     "react-image-gallery": "^0.9.1",
-    "rimraf": "^3.0.0",
+    "react-scripts": "^3.3.0",
     "sanitize-html": "^1.20.1"
   },
-  "devDependencies": {
-    "cross-env": "^6.0.3",
-    "sharp": "^0.23.2"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

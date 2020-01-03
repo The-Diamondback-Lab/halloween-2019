@@ -5,11 +5,12 @@ import sanitizeHtml from 'sanitize-html';
 /**
  * @type {string[]}
  */
-import contentData from '../public/content.json';
+import contentData from '../data/content.json';
+
 /**
  * @type {string[]}
  */
-import imageData from '../public/images.json';
+import imageData from '../data/images.json';
 
 /**
  * @typedef GalleryData

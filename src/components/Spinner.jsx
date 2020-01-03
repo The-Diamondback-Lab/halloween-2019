@@ -1,5 +1,6 @@
 import React from 'react';
-import '../styles/main.css';
+
+import spinnerPath from '../assets/spinner.jpg';
 
 export default class Spinner extends React.Component {
   constructor(props) {
@@ -21,7 +22,7 @@ export default class Spinner extends React.Component {
           <div className="spinner-container">
             <center>
               <img className="spinner-image"
-                src="images/spinner.jpg"
+                src={spinnerPath}
               />
               <div className="preload"> <span></span> <span></span> <span></span></div>
             </center>

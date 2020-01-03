@@ -1,5 +1,7 @@
 import React from 'react';
-import credits from '../public/credits.json';
+
+import credits from '../data/credits.json';
+import logoPath from '../assets/dbk-logo.png';
 
 export default class Footer extends React.Component {
   constructor(props) {
@@ -12,7 +14,7 @@ export default class Footer extends React.Component {
         <p className="credits">Credits</p>
         { credits.map((creditLine, idx) => <p key={`credit-${idx}`}>{creditLine}</p>) }
         <a href="https://dbknews.com" target="_blank">
-          <img className="footer-logo" src="/images/dbk-logo.png"></img>
+          <img className="footer-logo" src={logoPath}></img>
         </a>
       </footer>
     );
