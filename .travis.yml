@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+ - "10.17.0"
+branches:
+  only:
+    - master
+before_deploy:
+  - npm run build
+deploy:
+  provider: s3
+  access_key_id: "${AWS_ACCESS_KEY_ID}"
+  secret_access_key: ${AWS_SECRET_ACCESS_KEY}
+  bucket: "halloween19.dbknews.com"
+  local_dir: build # TODO Next.JS compiles to .next/
+  skip_cleanup: true
+after_deploy:
+  - echo "Static site deployed"
