@@ -11,7 +11,7 @@ deploy:
   access_key_id: "${AWS_ACCESS_KEY_ID}"
   secret_access_key: ${AWS_SECRET_ACCESS_KEY}
   bucket: "halloween19.dbknews.com"
-  local_dir: out # TODO Next.JS compiles to .next/
+  local_dir: build # TODO Next.JS compiles to .next/
   skip_cleanup: true
 after_deploy:
   - echo "Static site deployed"
