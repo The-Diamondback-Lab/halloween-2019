@@ -4,7 +4,7 @@ import Spinner from '../components/Spinner';
 import Header from '../components/Header';
 import Content from '../components/Content';
 import Footer from '../components/Footer';
-import'../styles/main.css';
+import '../styles/main.css';
 
 export default class Home extends React.Component {
   constructor() {
