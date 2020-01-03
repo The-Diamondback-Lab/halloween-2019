@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "npm run build",
     "dev": "cross-env NODE_OPTIONS=\"--inspect\" next dev",
-    "prebuild": "rimraf out/",
-    "build": "next build && next export",
+    "build": "next build",
+    "predeploy": "rimraf out/ && npm run build",
+    "deploy": "next export",
     "start": "next start"
   },
   "dependencies": {
