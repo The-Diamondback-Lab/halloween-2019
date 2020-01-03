@@ -164,8 +164,6 @@ export default class Content extends React.Component {
   }
 
   render() {
-    let { paragraphs } = this.state;
-
     let galleryObjs = this.generateGalleries();
     let articleContent = this.generateContent(galleryObjs.data, galleryObjs.galleries);
 
