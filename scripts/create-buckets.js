@@ -26,5 +26,5 @@ let promises = args.map(bucketName =>
 Promise.all(promises)
   .then(() => console.log('Buckets created'))
   .catch(err => {
-    throw new err;
+    throw err;
   });
